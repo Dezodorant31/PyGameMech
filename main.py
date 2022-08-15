@@ -3,7 +3,7 @@ pygame.init()
 
 from Chest import *
 
-
+# minimal template Pygame
 # минимальная программа Pygame
 class Game:
     def __init__(self, argSize: int, caption: str):
@@ -12,7 +12,7 @@ class Game:
         self.clock = pygame.time.Clock()
 
     def run(self, FPS: int):
-
+        #базовый цикл игры
         isGame = True
         while isGame:
             for event in pygame.event.get():
@@ -25,6 +25,8 @@ class Game:
 
 
 if __name__ == "__main__":
+    #Экземпляр Game с подписью "Game" и шириной и высотой экрана 1000 пикселей
+    #run - запуск игры с частотой кадров 60 к/с
     game = Game(1000, "Game")
     game.run(60)
 
